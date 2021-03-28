@@ -3,7 +3,7 @@ import { delay } from "redux-saga";
 
 export function* getSearch(q) {
   let task;
-  console.log("getSearch == == = =");
+
   // Start a worker listening for `SET_SEARCH` actions.
   while (true) {
     // Read the query from the action
@@ -20,11 +20,7 @@ export function* getSearch(q) {
 }
 
 function* handleSearch(q) {
-  console.log("handleSearch == == = =", q.filter);
   let data = {};
-  // Debounce by 1s. This will lock the process for one second before
-  // performing its logic. Since the process is blocked, it can be cancelled
-  // by `watchSearch` if there are any other actions.
   yield call(delay, 100);
 
   data = q.data.filter(function(item) {
