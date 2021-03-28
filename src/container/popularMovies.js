@@ -51,14 +51,6 @@ const popularMovies = () => {
     <div>
       <div className="row m-3 p-2 border bg-info text-white">
         <div className="col-md-4">
-          {/* <select
-            className="form-control"
-            onChange={(event) => filterData(event)}
-          >
-            <option value="">Rating</option>
-            <option value="RL">Rating Low</option>
-            <option value="RH">Rating High</option>
-          </select> */}
           <DropDown sortFuncation={filterData} />
         </div>
         <div className="col-md-4" />
