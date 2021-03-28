@@ -22,10 +22,10 @@ const popularMovies = () => {
   /*
     Dispatch the action to sort the movies by Rating wise Higest and lowest
 */
-  const filterData = (data) => {
+  const filterData = (value) => {
     dispatch({
       type: "REQUEST_FILTER_DATA",
-      filter: data.target.value,
+      filter: value,
       data: PMData,
     });
   };
